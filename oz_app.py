@@ -6,7 +6,7 @@ oz_app = Flask(__name__)
 
 @oz_app.route("/")
 def home_view():
-    return 'Hello, world!'
+    return <h1>"Hello, world!"</h1>
    # return render_template('home.html')
         
 #@oz_app.route('/result/', methods=['GET','POST'])
@@ -17,4 +17,4 @@ def home_view():
  #       return render_template('input_selections.html') 
 
 if __name__ == "__main__":
-    oz_app.run(port=33507) #debug=TRUE
+    oz_app.run(debug=TRUE, port=33507)
