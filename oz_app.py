@@ -5,14 +5,13 @@ from flask import Flask, render_template, request
 oz_app = Flask(__name__)
 
 @oz_app.route('/home/', methods=['GET','POST'])
-def index():
-    if request.method == 'POST':
-        options_selected = request.form.get('regressor')
-        print(options_selected)
-        render_template('input_selections.html')
+        return render_template('input_selections.html')
         
 #@oz_app.route('/result/')
-
+#def index():
+ #   if request.method == 'POST':
+ #       options_selected = request.form.get('regressor')
+ #       print(options_selected)
 
 if name == "__main__":
   oz_app.run()
