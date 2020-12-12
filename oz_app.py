@@ -12,6 +12,7 @@ def home_view():
         options_selected = request.form.get('regressor')
         print(options_selected)
         return render_template('input_selections.html') 
+      else render_template('home.html')
 
 #@oppzones_app.route('/result/', methods=['GET','POST'])
 #def index():
