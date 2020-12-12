@@ -14,4 +14,4 @@ oz_app = Flask(__name__)
  #       print(options_selected)
 
 if name == "__main__":
-  oz_app.run()
+  oz_app.run(debug=TRUE)
