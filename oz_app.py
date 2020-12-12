@@ -15,5 +15,5 @@ def home_view():
  #       print(options_selected)
  #       return render_template('input_selections.html') 
 
-if name == "__main__":
+if name == '__main__':
   oz_app.run(debug=TRUE)
