@@ -1,1 +1,1 @@
-web: gunicorn oz_app.wsgi
+web: gunicorn oz_app:oppzones
