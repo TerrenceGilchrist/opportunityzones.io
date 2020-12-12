@@ -9,7 +9,7 @@ def home_view():
     # return "<h1>Hello, world!</h1>"
     return render_template('home.html')
 
-@oppzones_app.route('/result/', methods=['GET','POST'])
+@oppzones_app.route('/result', methods=['GET','POST'])
 def index():
     if request.method == 'POST':
         options_selected = request.form.get('regressor')
