@@ -4,7 +4,7 @@
 from flask import Flask,render_template,request
 oz_app = Flask(__name__)
 
-@oz_app.route('/home/')
+@oz_app.route('/home')
 def home_view:
     return render_template('home.html')
         
