@@ -13,8 +13,10 @@
   <body>  
     <div class="container">
         <form action="/result" method="post">
-            <input type="checkbox" value="employment" name="regressor">
-            <input type="checkbox" value="housing price" name="regressor">
+            <input type="checkbox" value="employment" name="regressor_one">
+            <label for="regressor_one> Employment </label>
+            <input type="checkbox" value="housing price" name="regressor_two">
+            <label for="regressor_two"> Housing Price </label>
             <input type="submit" value="Run Regression">
         </form>
     </div>
