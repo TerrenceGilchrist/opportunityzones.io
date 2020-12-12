@@ -4,7 +4,7 @@
 from flask import Flask, render_template, request
 oz_app = Flask(__name__)
 
-@oz_app.route('/')
+@oz_app.route("/")
 def home_view():
     return render_template('home.html')
         
@@ -15,5 +15,5 @@ def home_view():
  #       print(options_selected)
  #       return render_template('input_selections.html') 
 
-if __name__ == '__main__':
-  oz_app.run(debug=TRUE)
+if __name__ == "__main__":
+    oz_app.run(debug=TRUE)
