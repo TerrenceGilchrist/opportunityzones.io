@@ -10,8 +10,7 @@ def home_view():
     # return render_template('home.html')
       if request.method == 'POST':
         options_selected = request.form.get('regressor')
-        print(options_selected)
-        return render_template('input_selections.html') 
+        return render_template('input_selections.html', options_selected) 
       else render_template('home.html')
 
 #@oppzones_app.route('/result/', methods=['GET','POST'])
