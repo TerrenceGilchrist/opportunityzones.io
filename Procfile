@@ -1,1 +1,1 @@
-web: gunicorn oz_app:oppzones
+web: gunicorn oz_app:oppzones_app
