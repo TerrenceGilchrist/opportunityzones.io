@@ -4,7 +4,7 @@
 from flask import Flask, render_template, request
 oppzones_app = Flask(__name__)
 
-oppzones_app.options_selected = {}
+options_selected = {}
 
 @oppzones_app.route('/')
 def home_view():
@@ -14,7 +14,7 @@ def home_view():
 @oppzones_app.route('/result', methods=['GET','POST'])
 def index():
     if request.method == 'POST':
-        oppzones_app.options_selected['regressor'] = request.form.get('regressor')
+        options_selected['regressor'] = request.form.get('regressor')
         #print(options_selected)
         return render_template('input_selections.html', options_selected=options_selected) 
 
