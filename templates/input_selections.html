@@ -1,3 +1,4 @@
+<!doctype html>
 # Page view of checkbox selections for feature-regressors
 # December 11, 2020 ~7:01 p.m. to 
 
@@ -6,10 +7,12 @@
     <head> <title> Selected Features-Regressors </title>
     </head>
     
-    <div>
-        {for option_selected in options_selected}
+  <body>  
+    <div id=container>
+        {% for option_selected in options_selected %}
         {{option_selected}}
-        {endfor}
+        {% endfor %}
     </div>
+  </body>
     
 </html>
