@@ -14,8 +14,7 @@ def home_view():
 @oppzones_app.route('/result', methods=['GET','POST'])
 def index():
     if request.method == 'POST':
-        oppzones_app.options_selected = request.form.get('regressor_one')
-        oppzones_app.options_selected = request.form.get('regressor_two')
+        oppzones_app.options_selected = request.form.get('regressor')
         #print(options_selected)
         return render_template('input_selections.html', options_selected=options_selected) 
 
