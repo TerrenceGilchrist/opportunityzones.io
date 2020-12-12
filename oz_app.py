@@ -4,6 +4,8 @@
 from flask import Flask, render_template, request
 oppzones_app = Flask(__name__)
 
+options_selected = {}
+
 @oppzones_app.route('/')
 def home_view():
     # return "<h1>Hello, world!</h1>"
