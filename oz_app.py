@@ -6,7 +6,8 @@ oz_app = Flask(__name__)
 
 @oz_app.route("/")
 def home_view():
-    return render_template('home.html')
+    print("Hello, world!")
+   # return render_template('home.html')
         
 #@oz_app.route('/result/', methods=['GET','POST'])
 #def index():
