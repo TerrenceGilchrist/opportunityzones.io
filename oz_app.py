@@ -4,10 +4,11 @@
 from flask import Flask, render_template, request
 oz_app = Flask(__name__)
 
-@oz_app.route('/home/', methods=['GET','POST'])
+@oz_app.route('/home/')
+        def home_view:
         return render_template('input_selections.html')
         
-#@oz_app.route('/result/')
+#@oz_app.route('/result/', methods=['GET','POST'])
 #def index():
  #   if request.method == 'POST':
  #       options_selected = request.form.get('regressor')
