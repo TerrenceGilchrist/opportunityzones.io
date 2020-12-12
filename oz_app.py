@@ -4,9 +4,9 @@
 from flask import Flask, render_template, request
 oz_app = Flask(__name__)
 
-@oz_app.route("/")
+@oz_app.route('/')
 def home_view():
-    return <h1>"Hello, world!"</h1>
+    return "<h1>Hello, world!</h1>"
    # return render_template('home.html')
         
 #@oz_app.route('/result/', methods=['GET','POST'])
