@@ -4,7 +4,7 @@
 from flask import Flask, render_template, request
 oppzones_app = Flask(__name__)
 
-@oppzones_app.route('/home/')
+@oppzones_app.route('/')
 def home_view():
     # return "<h1>Hello, world!</h1>"
     return render_template('home.html')
