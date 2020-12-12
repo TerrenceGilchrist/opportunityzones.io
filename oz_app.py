@@ -6,8 +6,8 @@ oppzones_app = Flask(__name__)
 
 @oppzones_app.route('/')
 def home_view():
-    return "<h1>Hello, world!</h1>"
-   # return render_template('home.html')
+    # return "<h1>Hello, world!</h1>"
+    return render_template('home.html')
         
 #@oppzones_app.route('/result/', methods=['GET','POST'])
 #def index():
