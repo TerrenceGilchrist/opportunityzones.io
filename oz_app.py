@@ -17,4 +17,4 @@ def home_view():
  #       return render_template('input_selections.html') 
 
 if __name__ == "__main__":
-    oz_app.run(debug=TRUE, port=33507)
+    oz_app.run(debug=TRUE)
