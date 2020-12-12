@@ -1,1 +1,1 @@
-web: gunicorn oz_app:app
+web: gunicorn oz_app.wsgi
