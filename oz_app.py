@@ -4,21 +4,17 @@
 from flask import Flask, render_template, request
 oppzones_app = Flask(__name__)
 
-@oppzones_app.route('/home/', methods=['GET','POST'])
+@oppzones_app.route('/home/')
 def home_view():
     # return "<h1>Hello, world!</h1>"
-    # return render_template('home.html')
-      if request.method == 'POST':
-        options_selected = request.form.get('regressor')
-        return render_template('input_selections.html', options_selected) 
-      else render_template('home.html')
+    return render_template('home.html')
 
-#@oppzones_app.route('/result/', methods=['GET','POST'])
-#def index():
- #   if request.method == 'POST':
- #       options_selected = request.form.get('regressor')
- #       print(options_selected)
- #       return render_template('input_selections.html') 
+@oppzones_app.route('/result/', methods=['GET','POST'])
+def index():
+    if request.method == 'POST':
+        options_selected = request.form.get('regressor')
+        #print(options_selected)
+        return render_template('input_selections.html', options_selected=options_selected) 
 
 if __name__ == "__main__":
     oppzones_app.run(debug=TRUE)
