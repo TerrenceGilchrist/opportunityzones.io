@@ -3,15 +3,13 @@
 
 <html>
 
-    <head> <title> Selecting Features-Regressors </title>
+    <head> <title> Selected Features-Regressors </title>
     </head>
     
     <div>
-    <form method="post">
-    <input type="checkbox" name="regressor" value="employment" id="employment" checked>
-    <input type="checkbox" name="regressor" value="housing price" id="housing price" checked>
-        <button type="submit">Run Regression</button>
-    </form>
+        {for input_selection in input_selections}
+        {{input_selection}}
+        {endfor}
     </div>
     
 </html>
