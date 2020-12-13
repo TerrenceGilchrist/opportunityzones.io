@@ -5,6 +5,7 @@ from flask import Flask, render_template, request
 oppzones_app = Flask(__name__)
 
 options_selected = {}
+options_list = {}
 
 @oppzones_app.route('/')
 def home_view():
@@ -15,8 +16,9 @@ def home_view():
 def index():
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=False)
+        options_list = list(options_selected.values())
         #print(options_selected)
-        return render_template('input_selections.html', options_selected=options_selected)
+        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list)
     # else
     #   return render_template('home.html')
 
