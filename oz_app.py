@@ -45,7 +45,7 @@ def index():
         options_selected = request.form.to_dict(flat=False)
         options_list = list(options_selected.values())
         #print(options_selected)
-        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, chart_mp=chart_mp)
+        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, chart_mp)
     # else
     #   return render_template('home.html')
 
