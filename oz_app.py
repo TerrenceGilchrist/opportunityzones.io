@@ -16,7 +16,9 @@ def index():
     if request.method == 'POST':
         options_selected = request.form.getlist('regressor')
         #print(options_selected)
-        return render_template('input_selections.html', options_selected=options_selected) 
+        return render_template('input_selections.html', options_selected=options_selected)
+    # else
+    #   return render_template('home.html')
 
 if __name__ == "__main__":
     oppzones_app.run(debug=TRUE)
