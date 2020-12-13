@@ -4,7 +4,7 @@
 import pandas as pd
 import altair as alt
 
-from sklearn import linear_model
+from sklearn.linear_model import LinearRegression
 from flask import Flask, render_template, request
 oppzones_app = Flask(__name__)
 
