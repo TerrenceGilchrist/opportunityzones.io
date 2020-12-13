@@ -19,7 +19,13 @@
         <div> {{options_selected.values()}} </div>
         <div> {{options_list}} </div>
     </div>
-      
+    
+    <div id=another_container>
+        {% for chart in chart_list %}
+            {{chart}}
+        {% endfor %}
+    </div>
+        
   </body>
     
 </html>
