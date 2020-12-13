@@ -30,7 +30,8 @@ chart_mfip = alt.Chart(Demographics).mark_line().encode(
 chart_mp = alt.Chart(Demographics).mark_line().encode(
 	x="Year",
 	y="Minority Population"
-).save('chart_mp.html')
+)
+chart_mp.save('chart_mp.html')
 
 chart_list = {chart_mfip, chart_mp}
 
