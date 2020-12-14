@@ -11,6 +11,7 @@ oppzones_app = Flask(__name__)
 options_selected = {}
 options_list = {}
 chart_list = {}
+intercept, coefficient = 0
 
 Tract_Demographics = {
 'Year': [2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001],
@@ -33,13 +34,13 @@ def index():
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=False)
         options_list = list(options_selected.values())
-	Y=Demographics['Median Family Income']
-	X=Demographics[options_list]
+	#Y=Demographics['Median Family Income']
+	#X=Demographics[options_list]
 	#regressing = linear_model.LinearRegression()
 	#regressing.fit(X,y)
 	#intercept = regressing.intercept_
 	#coefficient = regressing.coef_
-        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=Y, coefficient=X)
+        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=1, coefficient=2)
     # else
     #   return render_template('home.html')
 
