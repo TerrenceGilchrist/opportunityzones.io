@@ -1,7 +1,7 @@
 # Structure for the page views
 # December 11, 2020 ~5:51 p.m. to 
 
-import pandas as pd
+#import pandas as pd
 #import altair as alt
 
 #from sklearn.linear_model import LinearRegression
@@ -21,7 +21,7 @@ Tract_Demographics = {
 'Owner Occupied Units':[231,231,231,231,199,199,199,199,199,215,215,215,215,215,215,215,215,215,319,319]
 }
 
-Demographics = pd.DataFrame(data=Tract_Demographics)
+Demographics = Tract_Demographics
 
 @oppzones_app.route('/')
 def home_view():
