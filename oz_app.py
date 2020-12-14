@@ -59,7 +59,7 @@ Test_Demographics_c = pd.DataFrame(data=Test_Tract_Demographics_c, columns=['Yea
 
 
 y=Demographics['Median Family Income']
-yc=Demographicsc['Median Family Income']
+yc=Demographics_c['Median Family Income']
 
 @oppzones_app.route('/')
 def home_view():
