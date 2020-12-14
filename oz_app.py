@@ -23,7 +23,7 @@ Tract_Demographics = {
 'Owner Occupied Units': [231,231,231,231,199,199,199,199,199,215,215,215,215,215,215,215,215,215,319,319]
 }
 
-y=Demographics['Median Family Income']
+y={38273,35242,34382}
 
 @oppzones_app.route('/')
 def home_view():
