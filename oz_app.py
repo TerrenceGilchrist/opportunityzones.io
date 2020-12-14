@@ -26,7 +26,7 @@ Tract_Demographics = {
 'Owner Occupied Units': [231,231,231,231,199,199,199,199,199,215,215,215,215,215,215,215,215,215,319,319]
 }
 Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
-y=Demographics['Median Family Income']
+#
 
 @oppzones_app.route('/')
 def home_view():
@@ -34,8 +34,9 @@ def home_view():
     return render_template('home.html')
 
 @oppzones_app.route('/result', methods=['GET','POST'])
-def index():
-	#X=Demographics[['Median Family Income Pct','Minority Population Pct']]
+def index(Demographics):
+	y=Demographics['Median Family Income']
+	X=Demographics[['Median Family Income Pct','Minority Population Pct']]
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=False)
         options_list = list(options_selected.values())
@@ -45,7 +46,7 @@ def index():
 	#intercept = regressing.intercept_
 	#coefficient = regressing.coef_
 	#intercept=intercept, coefficient=coefficient
-        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list)
+        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, y=y, X=X)
     # else
     #   return render_template('home.html')
 
