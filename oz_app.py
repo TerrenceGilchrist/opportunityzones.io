@@ -39,12 +39,6 @@ Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Fam
 #coefficient = regressing.coef_
 #intercept=intercept, coefficient=coefficient
 
-def index(Description):
-    if request.method == 'POST':
-        options_selected = request.form.to_dict(flat=False)
-        options_list = list(options_selected.values())
-	return render_template('input_selections.html', options_selected=options_selected, options_list=options_list)
-
 
 @oppzones_app.route('/')
 def home_view():
@@ -52,7 +46,11 @@ def home_view():
     return render_template('home.html')
 
 @oppzones_app.route('/result', methods=['GET','POST'])
-index(Demographics)
+def index(Description):
+    if request.method == 'POST':
+        options_selected = request.form.to_dict(flat=False)
+        options_list = list(options_selected.values())
+	return render_template('input_selections.html', options_selected=options_selected, options_list=options_list)
     # else
     #   return render_template('home.html')
 
