@@ -21,7 +21,7 @@ Tract_Demographics = {
 'Owner Occupied Units':[231,231,231,231,199,199,199,199,199,215,215,215,215,215,215,215,215,215,319,319]
 }
 
-Demographics = pd.DataFrame(Tract_Demographics)
+Demographics = pd.DataFrame(data=Tract_Demographics)
 
 @oppzones_app.route('/')
 def home_view():
