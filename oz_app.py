@@ -48,8 +48,7 @@ def index(Demographics):
 	#intercept = regressing.intercept_
 	#coefficient = regressing.coef_
 	#intercept=intercept, coefficient=coefficient
-index(Demographics)
-return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, y=y, X=X)
+	return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, y=y, X=X)
     # else
     #   return render_template('home.html')
 
