@@ -33,8 +33,8 @@ def index():
 	'Minority Population': [1090,1090,1090,1090,1215,1215,1215,1215,1215,1561,1561,1561,1561,1561,1561,1561,1561,1561,1848,1848],
 	'Owner Occupied Units': [231,231,231,231,199,199,199,199,199,215,215,215,215,215,215,215,215,215,319,319]
 	}
-	Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
-	Y=Demographics['Median Family Income']
+	#Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
+	#Y=Demographics['Median Family Income']
 	
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=False)
