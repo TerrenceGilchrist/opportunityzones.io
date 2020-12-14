@@ -54,6 +54,7 @@ def index():
         regressing = LinearRegression()
         regressing.fit(X,y)
         predicted_income = regressing.predict(X_test)
+        predicted_income = predicted_income[0]
         intercept = regressing.intercept_
         #intercept = round(intercept,2)
         coefficient = regressing.coef_
