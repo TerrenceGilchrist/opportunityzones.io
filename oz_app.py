@@ -1,7 +1,7 @@
 # Structure for the page views
 # December 11, 2020 ~5:51 p.m. to 
 
-import pandas as pd
+#import pandas as pd
 #import altair as alt
 
 #from sklearn.linear_model import LinearRegression
