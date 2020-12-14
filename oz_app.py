@@ -38,7 +38,7 @@ def index():
 	}
 	Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
 	y=Demographics['Median Family Income']
-	X=Demographics[options_list]
+	X=Demographics[['Median Family Income Pct','Minority Population Pct']]
 	regressing = LinearRegression()
 	#regressing.fit(X,y)
 	#intercept = regressing.intercept_
