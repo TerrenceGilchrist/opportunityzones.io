@@ -26,7 +26,7 @@ def home_view():
     return render_template('home.html')
 
 @oppzones_app.route('/result', methods=['GET','POST'])
-index()
+    index()
 
 
 if __name__ == "__main__":
