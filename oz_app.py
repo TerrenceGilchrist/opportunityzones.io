@@ -4,7 +4,7 @@
 
 #import altair as alt
 
-#from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression
 from flask import Flask, render_template, request
 import pandas as pd
 
@@ -16,15 +16,6 @@ chart_list = {}
 intercept = 0
 coefficient = 0
 
-
-
-@oppzones_app.route('/')
-def home_view():
-    # return "<h1>Hello, world!</h1>"
-    return render_template('home.html')
-
-@oppzones_app.route('/result', methods=['GET','POST'])
-def index():
 	Tract_Demographics = {
 	'Year': [2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001],
 	'Median Family Income Pct': [45.24,45.24,45.24,45.24,39.7,39.7,39.7,38.85,38.85,45.4,45.4,45.4,45.4,45.4,45.4,45.4,45.4,45.13,48,48],
@@ -33,13 +24,19 @@ def index():
 	'Minority Population': [1090,1090,1090,1090,1215,1215,1215,1215,1215,1561,1561,1561,1561,1561,1561,1561,1561,1561,1848,1848],
 	'Owner Occupied Units': [231,231,231,231,199,199,199,199,199,215,215,215,215,215,215,215,215,215,319,319]
 	}
-	#Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
-	#Y=Demographics['Median Family Income']
-	
+	Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
+	Y=Demographics['Median Family Income']
+
+@oppzones_app.route('/')
+def home_view():
+    # return "<h1>Hello, world!</h1>"
+    return render_template('home.html')
+
+@oppzones_app.route('/result', methods=['GET','POST'])
+def index():
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=False)
         options_list = list(options_selected.values())
-
 	#X=Demographics[options_list]
 	#regressing = LinearRegression().fit(X,y)
 	#regressing
