@@ -22,6 +22,15 @@
         {% endfor %}
         <div> Prediction of Median Income </div>
         <div> {{predicted_income}} </div>
+        <div></div>
+        <div> Intercept_c </div>
+        <div> {{interceptc}} </div>
+        <div> Coefficient(s)_c </div>
+        {% for coeff in coefficientc %}
+            {{coeff}}
+        {% endfor %}
+        <div> Prediction of Median Income, chronologically ordered data set </div>
+        <div> {{predicted_incomec}} </div>
     </div>
 
   </body>
