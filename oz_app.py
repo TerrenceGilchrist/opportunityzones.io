@@ -37,7 +37,7 @@ def home_view():
 def index():
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=True)
-        options_list=list(options_selected)
+        options_list=list(options_selected.values())
         X=Democraphics['Minority Population']
         return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=intercept, y=y, X=X)
 
