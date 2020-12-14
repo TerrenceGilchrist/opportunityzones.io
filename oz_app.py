@@ -53,7 +53,7 @@ def home_view():
     return render_template('home.html')
 
 @oppzones_app.route('/result', methods=['GET','POST'])
-	index(Demographics)
+index(Demographics)
     # else
     #   return render_template('home.html')
 
