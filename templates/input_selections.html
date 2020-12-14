@@ -17,7 +17,9 @@
         <div> Intercept </div>
         <div> {{intercept}} </div>
         <div> Coefficient(s) </div>
-        <div> {{coefficient}} </div>
+        {% for coeff in coefficient %}
+            {{coeff}}
+        {% endfor %}
     </div>
 
   </body>
