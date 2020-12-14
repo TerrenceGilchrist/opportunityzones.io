@@ -26,6 +26,7 @@ Tract_Demographics = {
 }
 
 Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
+Y=Demographics['Median Family Income']
 
 @oppzones_app.route('/')
 def home_view():
@@ -37,7 +38,7 @@ def index():
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=False)
         options_list = list(options_selected.values())
-	Y=Demographics['Median Family Income']
+
 	#X=Demographics[options_list]
 	#regressing = linear_model.LinearRegression()
 	#regressing.fit(X,y)
