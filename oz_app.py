@@ -37,7 +37,7 @@ def index():
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=False)
         options_list = list(options_selected.values())
-	X=Demographics['Median Family Income Pct','Minority Population Pct']
+	X=Demographics[['Median Family Income Pct','Minority Population Pct']]
 	#regressing = LinearRegression().fit(X,y)
 	#regressing
 	#intercept = regressing.intercept_
