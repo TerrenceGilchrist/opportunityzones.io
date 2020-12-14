@@ -15,9 +15,6 @@ intercept = 0
 coefficient = 0
 
 
-
-
-
 @oppzones_app.route('/')
 def home_view():
     # return "<h1>Hello, world!</h1>"
@@ -28,9 +25,9 @@ def index():
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=False)
         options_list = list(options_selected.values())
-     return render_template('input_selections.html', options_selected=options_selected, options_list=options_list)
-    # else
-    #   return render_template('home.html')
+        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list)
+     else
+        return render_template('home.html')
 
 if __name__ == "__main__":
     oppzones_app.run(debug=TRUE)
