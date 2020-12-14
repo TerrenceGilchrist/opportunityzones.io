@@ -27,7 +27,9 @@ Tract_Demographics = {
 }
 Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
 #
-
+y=Demographics['Median Family Income']
+X=Demographics[['Median Family Income Pct','Minority Population Pct']]
+	
 @oppzones_app.route('/')
 def home_view():
     # return "<h1>Hello, world!</h1>"
@@ -46,7 +48,8 @@ def index(Demographics):
 	#intercept = regressing.intercept_
 	#coefficient = regressing.coef_
 	#intercept=intercept, coefficient=coefficient
-        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, y=y, X=X)
+index(Demographics)
+return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, y=y, X=X)
     # else
     #   return render_template('home.html')
 
