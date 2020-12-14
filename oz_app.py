@@ -42,7 +42,7 @@ Tract_Demographics_c = {'Year': [2001,2002,2003,2004,2005,2006,2007,2008,2009,20
 'Owner Occupied Units': [319,319,215,215,215,215,215,215,215,215,215,199,199,199,199,199,231]
 }
 
-Test_Tract_Demographics_c
+Test_Tract_Demographics_c = {
 'Year': [2018,2019,2020],
 'Median Family Income Pct': [45.24,45.24,45.24],
 'Median Family Income': [34382,35242,38273],
@@ -80,12 +80,13 @@ def index():
         intercept = regressing.intercept_
         coefficient = regressing.coef_
         Xc=Demographics_c[options_list]
-        X_testc=Test_Demographics_c[options_list]        
-        regressing.fit(Xc,yc)
-        predicted_incomec = regressing.predict(X_testc)
+        X_testc=Test_Demographics_c[options_list]
+        regressingc = LinearRegression()
+        regressingc.fit(Xc,yc)
+        predicted_incomec = regressingc.predict(X_testc)
         predicted_incomec = predicted_incomec[0]
-        interceptc = regressing.intercept_
-        coefficientc = regressing.coef_
+        interceptc = regressingc.intercept_
+        coefficientc = regressingc.coef_
         #intercept = round(intercept,2)
         #coefficient = round(coefficient,3)
         return render_template('input_selections.html', options_list=options_list, intercept=intercept, coefficient=coefficient, predicted_income=predicted_income, interceptc=interceptc, coefficientc=coefficientc, predicted_incomec=predicted_incomec)
