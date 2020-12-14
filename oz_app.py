@@ -36,7 +36,7 @@ def index():
         #print(options_selected)
 	
 	y=Demographics['Median Family Income']
-	X=Demographics[options_list]
+	X=options_list
 	#regressing = linear_model.LinearRegression()
 	#regressing.fit(X,y)
 	#intercept = regressing.intercept_
