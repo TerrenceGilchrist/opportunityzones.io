@@ -36,14 +36,12 @@ def home_view():
     return render_template('home.html')
 
 @oppzones_app.route('/result', methods=['GET','POST'])
-def index():
+def index(Description):
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=False)
         options_list = list(options_selected.values())
-	#y=38273
-	#X=options_list
-	#y=Demographics['Median Family Income']
-	#X=Demographics[['Median Family Income Pct','Minority Population Pct']]
+	y=38273
+	X=Description[['Median Family Income Pct','Minority Population Pct']]
 	#regressing = LinearRegression()
 	#regressing.fit([77.09,77.09,77.09,77.09,84.26,84.26,84.26,84.26,84.26,90.44],[38273,35242,34382,33432,27433,28187,27552,26379,26224,30236])
 	#regressing.fit(X,y)
@@ -51,6 +49,7 @@ def index():
 	#coefficient = regressing.coef_
 	#intercept=intercept, coefficient=coefficient
 	return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, y=y, X=X)
+index(Demographics)
     # else
     #   return render_template('home.html')
 
