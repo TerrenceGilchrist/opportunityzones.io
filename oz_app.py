@@ -48,7 +48,7 @@ Test_Tract_Demographics_c
 'Median Family Income': [34382,35242,38273],
 'Minority Population Pct': [77.09,77.09,77.09],
 'Minority Population': [1090,1090,1090],
-'Owner Occupied Units': [231,231,231],
+'Owner Occupied Units': [231,231,231]
 }
     
 Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
