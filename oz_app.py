@@ -33,13 +33,13 @@ def index():
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=False)
         options_list = list(options_selected.values())
-	y=Demographics['Median Family Income']
+	Y=Demographics['Median Family Income']
 	X=Demographics[options_list]
 	#regressing = linear_model.LinearRegression()
 	#regressing.fit(X,y)
 	#intercept = regressing.intercept_
 	#coefficient = regressing.coef_
-        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=y, coefficient=X)
+        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=Y, coefficient=X)
     # else
     #   return render_template('home.html')
 
