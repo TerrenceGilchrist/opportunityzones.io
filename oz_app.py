@@ -37,7 +37,8 @@ def index():
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=False)
         options_list = list(options_selected.values())
-        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=intercept, y=y)
+        X=Demographics[['Median Family Income Pct','Minority Population Pct']]
+        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=intercept, y=y, X=X)
 
 
 if __name__ == "__main__":
