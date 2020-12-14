@@ -38,8 +38,7 @@ def index():
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=False)
         options_list = list(options_selected.values())
-
-	#X=Demographics[options_list]
+	X=Demographics[options_list]
 	#regressing = linear_model.LinearRegression()
 	#regressing.fit(X,y)
 	#intercept = regressing.intercept_
