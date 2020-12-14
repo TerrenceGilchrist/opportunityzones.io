@@ -25,9 +25,6 @@ def home_view():
 
 @oppzones_app.route('/result', methods=['GET','POST'])
 def index():
-    if request.method == 'POST':
-        options_selected = request.form.to_dict(flat=False)
-        options_list = list(options_selected.values())
 	Tract_Demographics = {
 	'Year': [2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001],
 	'Median Family Income Pct': [45.24,45.24,45.24,45.24,39.7,39.7,39.7,38.85,38.85,45.4,45.4,45.4,45.4,45.4,45.4,45.4,45.4,45.13,48,48],
@@ -39,7 +36,11 @@ def index():
 	Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
 	y=Demographics['Median Family Income']
 	X=Demographics[['Median Family Income Pct','Minority Population Pct']]
-	regressing = LinearRegression()
+    if request.method == 'POST':
+        options_selected = request.form.to_dict(flat=False)
+        options_list = list(options_selected.values())
+
+	#regressing = LinearRegression()
 	#regressing.fit(X,y)
 	#intercept = regressing.intercept_
 	#coefficient = regressing.coef_
