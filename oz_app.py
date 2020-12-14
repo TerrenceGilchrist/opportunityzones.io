@@ -11,6 +11,7 @@ oppzones_app = Flask(__name__)
 options_selected = {}
 options_list = {}
 chart_list = {}
+X = {}
 intercept = 0
 coefficient = 0
 
