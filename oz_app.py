@@ -1,11 +1,13 @@
 # Structure for the page views
 # December 11, 2020 ~5:51 p.m. to 
 
-#import pandas as pd
+
 #import altair as alt
 
 #from sklearn.linear_model import LinearRegression
 from flask import Flask, render_template, request
+import pandas as pd
+
 oppzones_app = Flask(__name__)
 
 options_selected = {}
