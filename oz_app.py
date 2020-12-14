@@ -39,11 +39,11 @@ def index():
 	Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
 	Y=Demographics['Median Family Income']
 	X=Demographics[options_list]
-	#regressing = linear_model.LinearRegression()
-	#regressing.fit(X,y)
-	#intercept = regressing.intercept_
-	#coefficient = regressing.coef_
-        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=1, coefficient=2)
+	regressing = LinearRegression().fit(X,y)
+	#regressing
+	intercept = regressing.intercept_
+	coefficient = regressing.coef_
+        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=intercept, coefficient=intercept)
     # else
     #   return render_template('home.html')
 
