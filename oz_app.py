@@ -41,8 +41,9 @@ def index():
         X=Demographics[options_list]
         regressing = LinearRegression()
         regressing.fit(X,y)
-        intercept = regressing.intercept_
-        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=intercept, y=y, X=X)
+        intercept = round(regressing.intercept_,2)
+        coefficient = round(regressing.coef_,3)
+        return render_template('input_selections.html', options_list=options_list, intercept=intercept, coefficient=coefficient)
 
 
 if __name__ == "__main__":
