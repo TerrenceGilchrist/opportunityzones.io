@@ -20,17 +20,17 @@
         {% for coeff in coefficient %}
             {{coeff}}
         {% endfor %}
+        <p></p>
         <div> Prediction of Median Income </div>
         <div> {{predicted_income}} </div>
-        <div></div>
-        <div> Intercept_c </div>
-        <div> {{interceptc}} </div>
-        <div> Coefficient(s)_c </div>
-        {% for coeff in coefficientc %}
-            {{coeff}}
-        {% endfor %}
-        <div> Prediction of Median Income, chronologically ordered data set </div>
-        <div> {{predicted_incomec}} </div>
+        <div><p></p></div>
+
+        <script type="text/javascript">
+	        var spec = {{ created_chart | tojson | safe }};
+	        var embed_opt = {"mode": "vega-lite"};
+         vegaEmbed("Minority Population", spec, embed_opt)
+        </script>
+
     </div>
       <form action="/">
         <div> <input type="submit" style="background-color:#247E85;color:#33100B;border:black;padding:12px;font-size:10px;" value="Home"> </div>
