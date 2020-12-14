@@ -33,7 +33,7 @@ def home_view():
     # return "<h1>Hello, world!</h1>"
     return render_template('home.html')
 
-@oppzones_app.route('/result', methods=['GET','POST'], data=[Demographics])
+@oppzones_app.route('/result', methods=['GET','POST'])
 def index():
 	#X=Demographics[['Median Family Income Pct','Minority Population Pct']]
     if request.method == 'POST':
