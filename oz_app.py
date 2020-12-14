@@ -39,7 +39,8 @@ def index():
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=False)
         options_list = list(options_selected.values())
-	regressing = LinearRegression().fit([77.09,77.09,77.09,77.09,84.26,84.26,84.26,84.26,84.26,90.44],[38273,35242,34382,33432,27433,28187,27552,26379,26224,30236])
+	regressing = LinearRegression()
+	regressing.fit([77.09,77.09,77.09,77.09,84.26,84.26,84.26,84.26,84.26,90.44],[38273,35242,34382,33432,27433,28187,27552,26379,26224,30236])
 	#regressing.fit(X,y)
 	#intercept = regressing.intercept_
 	#coefficient = regressing.coef_
