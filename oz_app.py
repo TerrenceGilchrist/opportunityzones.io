@@ -54,8 +54,8 @@ Test_Tract_Demographics_c
 Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
 Test_Demographics = pd.DataFrame(data=Test_Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
 
-Demographicsc = pd.DataFrame(data=Tract_Demographicsc, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
-Test_Demographicsc = pd.DataFrame(data=Test_Tract_Demographicsc, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
+Demographics_c = pd.DataFrame(data=Tract_Demographics_c, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
+Test_Demographics_c = pd.DataFrame(data=Test_Tract_Demographics_c, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
 
 
 y=Demographics['Median Family Income']
@@ -79,8 +79,8 @@ def index():
         predicted_income = predicted_income[0]
         intercept = regressing.intercept_
         coefficient = regressing.coef_
-        Xc=Demographicsc[options_list]
-        X_testc=Test_Demographicsc[options_list]        
+        Xc=Demographics_c[options_list]
+        X_testc=Test_Demographics_c[options_list]        
         regressing.fit(Xc,yc)
         predicted_incomec = regressing.predict(X_testc)
         predicted_incomec = predicted_incomec[0]
