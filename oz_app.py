@@ -36,7 +36,8 @@ def home_view():
 @oppzones_app.route('/result', methods=['GET','POST'])
 def index():
     if request.method == 'POST':
-        options_selected = request.form.getlist("options_list")
+        options_selected = request.form.to_dict(flat=True)
+        options_list=options_selected
         X=options_selected
         return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=intercept, y=y, X=X)
 
