@@ -4,7 +4,7 @@
 
 #import altair as alt
 
-from sklearn.linear_model import LinearRegression
+#from sklearn.linear_model import LinearRegression
 from flask import Flask, render_template, request
 import pandas as pd
 
@@ -39,11 +39,11 @@ def index():
 	Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
 	Y=Demographics['Median Family Income']
 	X=Demographics[options_list]
-	regressing = LinearRegression().fit(X,y)
+	#regressing = LinearRegression().fit(X,y)
 	#regressing
-	intercept = regressing.intercept_
-	coefficient = regressing.coef_
-        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=intercept, coefficient=intercept)
+	#intercept = regressing.intercept_
+	#coefficient = regressing.coef_
+        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=1, coefficient=2)
     # else
     #   return render_template('home.html')
 
