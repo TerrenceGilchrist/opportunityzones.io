@@ -14,11 +14,7 @@ chart_list = {}
 intercept = 0
 coefficient = 0
 
-def index():
-    if request.method == 'POST':
-        options_selected = request.form.to_dict(flat=False)
-        options_list = list(options_selected.values())
-        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list)
+
 
 @oppzones_app.route('/')
 def home_view():
@@ -26,7 +22,11 @@ def home_view():
     return render_template('home.html')
 
 @oppzones_app.route('/result', methods=['GET','POST'])
-    index()
+def index():
+    if request.method == 'POST':
+        options_selected = request.form.to_dict(flat=False)
+        options_list = list(options_selected.values())
+        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=intercept)
 
 
 if __name__ == "__main__":
