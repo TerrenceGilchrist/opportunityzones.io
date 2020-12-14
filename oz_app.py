@@ -37,11 +37,11 @@ def index():
 	
 	y=Demographics['Median Family Income']
 	X=Demographics[options_list]
-	regressing = linear_model.LinearRegression()
-	regressing.fit(X,y)
-	intercept = regressing.intercept_
-	coefficient = regressing.coef_
-        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=intercept, coefficient=coefficient)
+	#regressing = linear_model.LinearRegression()
+	#regressing.fit(X,y)
+	#intercept = regressing.intercept_
+	#coefficient = regressing.coef_
+        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=y, coefficient=X)
     # else
     #   return render_template('home.html')
 
