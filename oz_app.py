@@ -23,11 +23,11 @@ def home_view():
 @oppzones_app.route('/result', methods=['GET','POST'])
 def index():
     if request.method == 'POST':
-        options_selected = request.form.to_dict(flat=False)
-        options_list = list(options_selected.values())
-        return render_template('input_selections.html', options_selected=options_selected, options_list=options_list)
-     else
-        return render_template('home.html')
+    options_selected = request.form.to_dict(flat=False)
+    options_list = list(options_selected.values())
+    return render_template('input_selections.html', options_selected=options_selected, options_list=options_list)
+    else
+    return render_template('home.html')
 
 if __name__ == "__main__":
     oppzones_app.run(debug=TRUE)
