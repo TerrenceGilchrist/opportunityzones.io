@@ -2,7 +2,7 @@
 # December 11, 2020 ~5:51 p.m. to 
 
 
-
+from sklearn.linear_model import LinearRegression
 from flask import Flask, render_template, request
 import pandas as pd
 
@@ -39,6 +39,9 @@ def index():
         options_selected = request.form.to_dict(flat=True)
         options_list=list(options_selected.values())
         X=Demographics[options_list]
+        regressing = LinearRegression()
+        regressing.fit(X,y)
+        intercept = regressing.intercept_
         return render_template('input_selections.html', options_selected=options_selected, options_list=options_list, intercept=intercept, y=y, X=X)
 
 
