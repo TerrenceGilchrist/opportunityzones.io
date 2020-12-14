@@ -35,11 +35,10 @@ def index():
 	}
 	Demographics = pd.DataFrame(data=Tract_Demographics, columns=['Year','Median Family Income Pct','Median Family Income','Minority Population Pct','Minority Population','Owner Occupied Units'])
 	y=Demographics['Median Family Income']
-	X=Demographics[['Median Family Income Pct','Minority Population Pct']]
+	#X=Demographics[['Median Family Income Pct','Minority Population Pct']]
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=False)
         options_list = list(options_selected.values())
-
 	#regressing = LinearRegression()
 	#regressing.fit(X,y)
 	#intercept = regressing.intercept_
