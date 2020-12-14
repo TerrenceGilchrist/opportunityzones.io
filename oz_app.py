@@ -42,9 +42,9 @@ def index():
         regressing = LinearRegression()
         regressing.fit(X,y)
         intercept = regressing.intercept_
-        intercept = round(intercept,2)
+        #intercept = round(intercept,2)
         coefficient = regressing.coef_
-        coefficient = round(coefficient,3)
+        #coefficient = round(coefficient,3)
         return render_template('input_selections.html', options_list=options_list, intercept=intercept, coefficient=coefficient)
 
 
