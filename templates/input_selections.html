@@ -10,23 +10,23 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
     </head>
 
-  <body>  
+  <body style="font-family:'Palatino';background:#E1F5FE;">  
     
-    <h1> Intercept, Coefficients, and Predicted Median Income from the Selected Features-Regressors </h2>
+    <h2 style="font-family:'Palatino';"> Intercept, Coefficients, and Predicted Median Income from the Selected Features-Regressors </h2>
       
     <div id=container>
-        <div> Selected Features </div>
+        <div style="font-family:'Palatino';color:#032E4A;"> Selected Features </div>
         <div> {{options_list}} </div>
         <p></p>
-        <div> Intercept </div>
+        <div style="font-family:'Palatino';color:#032E4A;"> Intercept </div>
         <div> {{intercept}} </div>
         <p></p>
-        <div> Coefficient(s) </div>
+        <div style="font-family:'Palatino';color:#032E4A;"> Coefficient(s) </div>
         {% for coeff in coefficient %}
             {{coeff}}
         {% endfor %}
         <p></p>
-        <div> Prediction of Median Income </div>
+        <div style="font-family:'Palatino';color:#032E4A;"> Prediction of Median Income </div>
         <div> {{predicted_income}} </div>
         <div><p></p></div>
     </div>
