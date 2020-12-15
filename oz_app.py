@@ -50,9 +50,8 @@ def home_view():
     # return "<h1>Hello, world!</h1>"
     chart = alt.Chart(Demographics).mark_line().encode(
     	x='Year',
-	y='Minority Population'
-    )    
-    return render_template('home.html')
+	y='Minority Population')    
+    return chart.to_json()
 
 @oppzones_app.route('/result', methods=['GET','POST'])
 def index():
