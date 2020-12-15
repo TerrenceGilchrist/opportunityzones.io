@@ -3,7 +3,7 @@
 
 
 from sklearn.linear_model import LinearRegression
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 import altair as alt
 import pandas as pd
 
@@ -44,7 +44,6 @@ y=Demographics['Median Family Income']
 
 @oppzones_app.route('/')
 def home_view():
-    # return "<h1>Hello, world!</h1>"
     return render_template('home.html')
 
 @oppzones_app.route('/result', methods=['GET','POST'])
