@@ -9,7 +9,6 @@ import altair as alt
 import pandas as pd
 import json
 
-oppzones_app = Flask(__name__)
 
 options_selected = {}
 options_list = {}
@@ -41,6 +40,10 @@ Test_Demographics = pd.DataFrame(data=Test_Tract_Demographics, columns=['Year','
 
 y=Demographics['Median Family Income']
 
+
+# --- Flask App ---
+
+oppzones_app = Flask(__name__)
 
 @oppzones_app.route('/')
 def home_view():
