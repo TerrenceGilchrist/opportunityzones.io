@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- Page view of checkbox selections for feature-regressors -->
-<!-- December 11, 2020 ~7:01 p.m. to -->
+<!-- December 11, 2020 ~7:01 p.m. to December 15, 2020 ~6:09 p.m. -->
 
 <html>
 
@@ -18,21 +18,21 @@
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Selected Features </div>
         <div> {{options_list}} </div>
         <p></p>
-        <div style="font-family:'Palatino';color:#074E80;"> Intercept </div>
+        <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Intercept </div>
         <div> {{intercept}} </div>
         <p></p>
-        <div style="font-family:'Palatino';color:#074E80;"> Coefficient(s) </div>
+        <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
         {% for coeff in coefficient %}
             {{coeff}}
         {% endfor %}
         <p></p>
-        <div style="font-family:'Palatino';color:#074E80;"> Prediction of Median Family Income </div>
+        <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Prediction of Median Family Income </div>
         <div> {{predicted_income}} </div>
         <p></p>
-        <div style="font-family:'Palatino';color:#074E80;"> Federal Financial Institutions Examination Council Estimate of Median Family Income for 2020 </div>
+        <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Federal Financial Institutions Examination Council Estimate of Median Family Income for 2020 </div>
         <div> {{ffiec_income_estimate_2020}} </div>
         <p></p>
-        <div style="font-family:'Palatino';color:#074E80;"> Difference Between FFIEC Estimate and Machine Learning Prediction of Median Family Income </div>
+        <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Difference Between FFIEC Estimate and Machine Learning Prediction of Median Family Income </div>
         <div> {{difference}} </div>
         <p></p>
         <div><p></p></div>
