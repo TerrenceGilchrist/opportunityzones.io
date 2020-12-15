@@ -61,8 +61,6 @@ def index():
         predicted_income = predicted_income[0]
         intercept = regressing.intercept_
         coefficient = regressing.coef_
-        #intercept = round(intercep, 2)
-        #coefficient = round(coefficien, 3)	
         return render_template('input_selections.html', options_list=options_list, intercept=intercept, coefficient=coefficient, predicted_income=predicted_income)
 
 
