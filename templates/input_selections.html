@@ -34,8 +34,7 @@
     <div> id="vis" </div>
     <script type="text/javascript">
         var spec = {{ created_chart | tojson | safe }};
-        var embed_opt = {"mode": "vega-lite"};
-        vegaEmbed("#vis", spec, embed_opt);
+        vegaEmbed("#vis", spec);
     </script>
     
       <form action="/">
