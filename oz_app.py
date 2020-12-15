@@ -62,8 +62,7 @@ def index():
         chart_mp = alt.Chart(Demographics).mark_line().encode(
     		x='Year',
 	    	y='Minority Population'
-        )
-        created_chart = chart_mp.to_json()        
+        )      
         return render_template('input_selections.html', options_list=options_list, intercept=intercept, coefficient=coefficient, predicted_income=predicted_income)
 
 
