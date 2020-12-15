@@ -3,7 +3,7 @@
 
 
 from sklearn.linear_model import LinearRegression
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request
 import altair as alt
 import pandas as pd
 
