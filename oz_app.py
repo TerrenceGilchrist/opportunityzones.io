@@ -65,6 +65,7 @@ def index():
                                intercept=intercept, coefficient=coefficient, 
                                predicted_income=predicted_income, ffiec_income_estimate_2020=ffiec_income_estimate_2020, 
                                difference=difference)
+    else return render_template('home.html')
 
 
 if __name__ == "__main__":
