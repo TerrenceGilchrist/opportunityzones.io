@@ -41,7 +41,6 @@ Test_Demographics = pd.DataFrame(data=Test_Tract_Demographics, columns=['Year','
 y=Demographics['Median Family Income']
 
 
-# --- Flask App ---
 
 @oppzones_app.route('/')
 def home_view():
