@@ -1,5 +1,5 @@
 # Structure for the page views
-# December 11, 2020 ~5:51 p.m. to December 15, 2020 ~6:41 p.m.
+# December 11, 2020 ~5:51 p.m. to December 15, 2020 ~6:45 p.m.
 
 
 from sklearn.linear_model import LinearRegression
@@ -50,7 +50,7 @@ def home_view():
 def index():
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=True)
-        if options_selected is None:
+        if options_selected == NULL:
             return render_template('home.html')
         else:
             options_list=list(options_selected.values())
