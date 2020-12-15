@@ -59,10 +59,10 @@ def index():
         regressing.fit(X,y)
         predicted_income = regressing.predict(X_test)
         predicted_income = predicted_income[0]
-        intercep = regressing.intercept_
-        coefficien = regressing.coef_
-        intercept = round(intercep, 2)
-        coefficient = round(coefficien, 3)	
+        intercept = regressing.intercept_
+        coefficient = regressing.coef_
+        #intercept = round(intercep, 2)
+        #coefficient = round(coefficien, 3)	
         return render_template('input_selections.html', options_list=options_list, intercept=intercept, coefficient=coefficient, predicted_income=predicted_income)
 
 
