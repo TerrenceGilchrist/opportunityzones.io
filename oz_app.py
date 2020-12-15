@@ -1,5 +1,5 @@
 # Structure for the page views
-# December 11, 2020 ~5:51 p.m. to December 15, 2020 ~6:23 p.m.
+# December 11, 2020 ~5:51 p.m. to December 15, 2020 ~6:38 p.m.
 
 
 from sklearn.linear_model import LinearRegression
@@ -50,23 +50,25 @@ def home_view():
 def index():
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=True)
-        options_list=list(options_selected.values())
-        X=Demographics[options_list]
-        X_test=Test_Demographics[options_list]
-        regressing = LinearRegression()
-        regressing.fit(X,y)
-        predicted_income = regressing.predict(X_test)
-        predicted_income = predicted_income[0]
-        ffiec_income_estimate_2020=Test_Demographics['Median Family Income'][2]
-        difference = ffiec_income_estimate_2020 - predicted_income
-        intercept = regressing.intercept_
-        coefficient = regressing.coef_
-        return render_template('input_selections.html', options_list=options_list, 
-                               intercept=intercept, coefficient=coefficient, 
-                               predicted_income=predicted_income, ffiec_income_estimate_2020=ffiec_income_estimate_2020, 
-                               difference=difference)
-    else:
-        return render_template('home.html')
+            if options_selected is None:
+                return render_template('home.html')
+            else:
+                options_list=list(options_selected.values())
+                X=Demographics[options_list]
+                X_test=Test_Demographics[options_list]
+                regressing = LinearRegression()
+                regressing.fit(X,y)
+                predicted_income = regressing.predict(X_test)
+                predicted_income = predicted_income[0]
+                ffiec_income_estimate_2020=Test_Demographics['Median Family Income'][2]
+                difference = ffiec_income_estimate_2020 - predicted_income
+                intercept = regressing.intercept_
+                coefficient = regressing.coef_
+                return render_template('input_selections.html', options_list=options_list, 
+                                    intercept=intercept, coefficient=coefficient, 
+                                    predicted_income=predicted_income, ffiec_income_estimate_2020=ffiec_income_estimate_2020, 
+                                    difference=difference)
+        
 
 
 if __name__ == "__main__":
