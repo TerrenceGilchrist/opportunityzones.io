@@ -50,10 +50,6 @@ def home_view():
 @oppzones_app.route('/result', methods=['GET','POST'])
 def index():
     if request.method == 'POST':
-	chart_mp = alt.Chart(Tract_Demographics).mark_line().encode(
-		x='Year', 
-		y='Minority Population'
-	)
         options_selected = request.form.to_dict(flat=True)
         options_list=list(options_selected.values())
         X=Demographics[options_list]
