@@ -46,11 +46,6 @@ oppzones_app = Flask(__name__)
 @oppzones_app.route('/')
 def home_view():
     # return "<h1>Hello, world!</h1>"
-    chart = (alt.Chart(Demographics)
-	     .mark_line()
-	     .encode(x='Year',
-		     y='Minority Population',
-		     color=alt.value('steelblue')))
     return render_template('home.html')
 
 @oppzones_app.route('/result', methods=['GET','POST'])
@@ -64,8 +59,10 @@ def index():
         regressing.fit(X,y)
         predicted_income = regressing.predict(X_test)
         predicted_income = predicted_income[0]
-        intercept = regressing.intercept_
-        coefficient = regressing.coef_      
+        intercep = regressing.intercept_
+        coefficien = regressing.coef_
+        intercept = round(intercep, 2)
+        coefficient = round(coefficien, 3)	
         return render_template('input_selections.html', options_list=options_list, intercept=intercept, coefficient=coefficient, predicted_income=predicted_income)
 
 
