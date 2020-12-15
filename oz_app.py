@@ -4,6 +4,7 @@
 
 from sklearn.linear_model import LinearRegression
 from flask import Flask, render_template, request
+import altair as alt
 import pandas as pd
 import json
 
@@ -60,8 +61,8 @@ def index():
         coefficient = regressing.coef_
         
         chart_+%1% = alt.Chart(Demographics).mark_line().encode(
-    	x="Year",
-	    y="Minority Population"
+    		x="Year",
+	    	y="Minority Population"
         )
         created_chart = json.loads(chart_+%1%.to_json())
         #intercept = round(intercept,2)
