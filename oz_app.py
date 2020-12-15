@@ -1,5 +1,5 @@
 # Structure for the page views
-# December 11, 2020 ~5:51 p.m. to December 15, 2020
+# December 11, 2020 ~5:51 p.m. to December 15, 2020 ~5:01 p.m.
 
 
 from sklearn.linear_model import LinearRegression
