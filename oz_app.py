@@ -1,5 +1,5 @@
 # Structure for the page views
-# December 11, 2020 ~5:51 p.m. to December 15, 2020 ~6:19 p.m.
+# December 11, 2020 ~5:51 p.m. to December 15, 2020 ~6:23 p.m.
 
 
 from sklearn.linear_model import LinearRegression
@@ -65,7 +65,8 @@ def index():
                                intercept=intercept, coefficient=coefficient, 
                                predicted_income=predicted_income, ffiec_income_estimate_2020=ffiec_income_estimate_2020, 
                                difference=difference)
-    else return render_template('home.html')
+    else:
+        return render_template('home.html')
 
 
 if __name__ == "__main__":
