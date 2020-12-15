@@ -59,14 +59,11 @@ def index():
         predicted_income = predicted_income[0]
         intercept = regressing.intercept_
         coefficient = regressing.coef_
-        
-        chart_+%1% = alt.Chart(Demographics).mark_line().encode(
+        chart_mp = alt.Chart(Demographics).mark_line().encode(
     		x="Year",
 	    	y="Minority Population"
         )
-        created_chart = json.loads(chart_+%1%.to_json())
-        #intercept = round(intercept,2)
-        #coefficient = round(coefficient,3)
+        created_chart = json.loads(chart_mp.to_json())
         return render_template('input_selections.html', options_list=options_list, intercept=intercept, coefficient=coefficient, predicted_income=predicted_income, created_chart=created_chart)
 
 
