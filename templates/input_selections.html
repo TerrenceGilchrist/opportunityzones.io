@@ -28,11 +28,11 @@
         <div> {{predicted_income}} </div>
         <div><p></p></div>
 
-        <script type="text/javascript">
-	        var spec = {{ created_chart | tojson | safe }};
-	        var embed_opt = {"mode": "vega-lite"};
-         vegaEmbed("Minority Population", spec, embed_opt)
-        </script>
+      <script type="text/javascript">
+	 var spec = {{ created_chart | tojson | safe }};
+	 var embed_opt = {"mode": "vega-lite"};
+         vegaEmbed("Minority Population", spec, embed_opt);
+      </script>
 
     </div>
       <form action="/">
