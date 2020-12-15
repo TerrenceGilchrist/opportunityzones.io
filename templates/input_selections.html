@@ -33,7 +33,7 @@
     
     <div> id="vis" </div>
     <script type="text/javascript">
-        var spec = {{ created_chart | tojson | safe }};
+        var spec = {{ created_chart }};
         vegaEmbed("#vis", spec);
     </script>
     
