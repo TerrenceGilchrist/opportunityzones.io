@@ -12,7 +12,7 @@
 
   <body style="font-family:'Palatino';background:#E1F5FE;">  
     
-    <h2 style="font-family:'Palatino';"> Intercept, Coefficients, and Predicted Median Income from the Selected Features-Regressors </h2>
+    <h2 style="font-family:'Palatino';"> Intercept, Coefficients, and Predicted Median Family Income from the Selected Features-Regressors </h2>
       
     <div id=container>
         <div style="font-family:'Palatino';color:#074E80;"> Selected Features </div>
@@ -26,8 +26,14 @@
             {{coeff}}
         {% endfor %}
         <p></p>
-        <div style="font-family:'Palatino';color:#074E80;"> Prediction of Median Income </div>
+        <div style="font-family:'Palatino';color:#074E80;"> Prediction of Median Family Income </div>
         <div> {{predicted_income}} </div>
+        <div style="font-family:'Palatino';color:#074E80;"> FFIEC Estimate of Median Family Income for 2020 </div>
+        <div> {{actual_income_estimate}} </div>
+        <p></p>
+        <div style="font-family:'Palatino';color:#074E80;"> Difference Between FFIEC Estimate and Machine Learning Prediction of Median Family Income </div>
+        <div> {{difference}} </div>
+        <p></p>
         <div><p></p></div>
     </div>
     
