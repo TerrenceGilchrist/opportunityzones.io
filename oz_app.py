@@ -48,9 +48,9 @@ oppzones_app = Flask(__name__)
 @oppzones_app.route('/')
 def home_view():
     # return "<h1>Hello, world!</h1>"
-    chart_mp = alt.Chart(Tract_Demographics).mark_line().encode(
-    		x='Year',
-	    	y='Minority Population'
+    chart = alt.Chart(Tract_Demographics).mark_line().encode(
+    	x='Year',
+	y='Minority Population'
     )    
     return render_template('home.html')
 
