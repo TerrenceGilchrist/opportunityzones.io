@@ -4,8 +4,8 @@
 
 from sklearn.linear_model import LinearRegression
 from flask import Flask, render_template, request
-#import altair as alt
-from altair import Chart
+import altair as alt
+#from altair import Chart
 import pandas as pd
 import json
 
@@ -48,10 +48,10 @@ oppzones_app = Flask(__name__)
 @oppzones_app.route('/')
 def home_view():
     # return "<h1>Hello, world!</h1>"
-    chart = Chart(Demographics).mark_line().encode(
+    chart = alt.Chart(Demographics).mark_line().encode(
     	x='Year',
 	y='Minority Population')    
-    return chart.to_json()
+    return chart
 
 @oppzones_app.route('/result', methods=['GET','POST'])
 def index():
