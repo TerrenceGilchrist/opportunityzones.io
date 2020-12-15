@@ -48,6 +48,10 @@ def home_view():
 
 @oppzones_app.route('/result', methods=['GET','POST'])
 def index():
+    chart_mp = alt.Chart(Demographics).mark_line().encode(
+    	x='Year',
+	y='Minority Population'
+    )
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=True)
         options_list=list(options_selected.values())
@@ -58,11 +62,7 @@ def index():
         predicted_income = regressing.predict(X_test)
         predicted_income = predicted_income[0]
         intercept = regressing.intercept_
-        coefficient = regressing.coef_
-        chart_mp = alt.Chart(Demographics).mark_line().encode(
-    		x='Year',
-	    	y='Minority Population'
-        )      
+        coefficient = regressing.coef_      
         return render_template('input_selections.html', options_list=options_list, intercept=intercept, coefficient=coefficient, predicted_income=predicted_income)
 
 
