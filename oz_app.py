@@ -50,7 +50,7 @@ def home_view():
 def index():
     if request.method == 'POST':
         options_selected = request.form.to_dict(flat=True)
-        if options_selected == NULL:
+        if options_selected == {}:
             return render_template('home.html')
         else:
             options_list=list(options_selected.values())
