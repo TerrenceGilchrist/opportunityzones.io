@@ -61,7 +61,7 @@ def index():
             predicted_income = predicted_income[0]
             ffiec_income_estimate_2020=Test_Demographics['Median Family Income'][2]
             difference = ffiec_income_estimate_2020 - predicted_income
-            intercept = regressing.(intercept_)
+            intercept = regressing.intercept_
             coefficient = regressing.coef_
             intercept = "{:.2f}".format(intercept)
             coefficient = "{:.2f}".format(coef)
