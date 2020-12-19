@@ -62,7 +62,7 @@ def index():
             predicted_income = regressing.predict(X_test)
             predicted_income = predicted_income[0]
             ffiec_income_estimate_2020=Test_Demographics['Median Family Income'][2]
-            difference = ffiec_income_estimate_2020
+            difference = ffiec_income_estimate_2020 - predicted_income
             return render_template('input_selections.html', options_list=options_list, 
                                     intercept=intercept, coefficient=coefficient, 
                                     predicted_income=predicted_income, ffiec_income_estimate_2020=ffiec_income_estimate_2020, 
