@@ -1,6 +1,7 @@
 <!doctype html>
 <!-- Page view of checkbox selections for feature-regressors -->
 <!-- December 11, 2020 ~7:01 p.m. to December 15, 2020 ~6:09 p.m. -->
+<!-- Last update: December 19, 2020 -->
 
 <html>
 
@@ -27,17 +28,33 @@
         <p></p>
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
         {% for coeff in coefficient %}
-            {{coeff}}
+        <div> 
+            <script type="text/javascript">
+            document.write({{coeff}}.toFixed(2));
+            </script>
+        </div>
         {% endfor %}
         <p></p>
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Prediction of Median Family Income </div>
-        <div> {{predicted_income}} </div>
+        <div> 
+            <script type="text/javascript">
+            document.write({{predicted_income}}.toFixed(2));
+            </script>
+        </div>
         <p></p>
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Federal Financial Institutions Examination Council Estimate of Median Family Income for 2020 </div>
-        <div> {{ffiec_income_estimate_2020}} </div>
+        <div>
+            <script type="text/javascript">
+            document.write({{ffiec_income_estimate_2020}}.toFixed(2));
+            </script>
+        </div>
         <p></p>
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Difference Between FFIEC Estimate and Machine Learning Prediction of Median Family Income </div>
-        <div> {{difference}} </div>
+        <div>
+            <script type="text/javascript">
+            document.write({{difference}}.toFixed(2));
+            </script>
+        </div>
         <p></p>
         <div><p></p></div>
     </div>
