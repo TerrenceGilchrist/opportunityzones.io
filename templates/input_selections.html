@@ -17,7 +17,9 @@
       
     <div id=container>
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Selected Features </div>
-        <div> {{options_list}} </div>
+        {% for option in options_list %}
+        <div> {{option}} </div>
+        {% endfor %}
         <p></p>
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Intercept </div>
         <div> 
@@ -36,11 +38,7 @@
         {% endfor %}
         <p></p>
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Prediction of Median Family Income </div>
-        <div> 
-            <script type="text/javascript">
-            document.write({{predicted_income}}.toFixed(2));
-            </script>
-        </div>
+        <div> {{predicted_income}} </div>
         <p></p>
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Federal Financial Institutions Examination Council Estimate of Median Family Income for 2020 </div>
         <div>
