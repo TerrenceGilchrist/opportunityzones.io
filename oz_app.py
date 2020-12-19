@@ -62,7 +62,7 @@ def index():
             ffiec_income_estimate_2020=Test_Demographics['Median Family Income'][2]
             difference = ffiec_income_estimate_2020 - predicted_income
             intercept = f"{(regressing.intercept_):.2f}"
-            coefficient = f"(regressing.coef_):.2f}"
+            coefficient = f"{(regressing.coef_):.2f}"
             predicted_income = f"{(predicted_income):.2f}"
             difference = f"{(difference):.2f}"
             return render_template('input_selections.html', options_list=options_list, 
