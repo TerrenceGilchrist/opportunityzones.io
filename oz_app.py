@@ -57,6 +57,8 @@ def index():
             X_test=Test_Demographics[options_list]
             regressing = LinearRegression()
             regressing.fit(X,y)
+            intercept = regressing.intercept_
+            coefficient = regressing.coef_
             predicted_income = regressing.predict(X_test)
             predicted_income = predicted_income[0]
             ffiec_income_estimate_2020=Test_Demographics['Median Family Income'][2]
