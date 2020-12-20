@@ -27,10 +27,12 @@
             <script type="text/javascript">
                 var options = {{options_list}};
                 var option;
+                var coefficients = {{coefficient}};
                 var coeff;
                 var i=0;
-                for (coeff of {{coefficient}}; i < {{coefficient}}.length; i++) {
-                    document.write( coeff[i].toFixed(4) );
+                var j=0;
+                for (j < options.length; i < coefficients.length; j++; i++) {
+                    document.write( options[j] + ":  " + coefficients[i].toFixed(4) );
                 }
             </script>
             </div>
