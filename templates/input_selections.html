@@ -26,8 +26,9 @@
 
         <div>
             <script type="text/javascript">
-                
-                for (let i = 0; i <3; i++) {
+            var coeff = Array.from({{coefficient}}),
+                option = Array.from({{options_list}});
+                for (let i = 0; i <coeff.length; i++) {
             document.write({{intercept}}.toFixed(2));
                 };
 
