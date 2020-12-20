@@ -25,8 +25,9 @@
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
             <div> 
             <script type="text/javascript">
-                for (coeff in coefficient) {
-                    document.write( {{coeff}}.toFixed(2) );
+                var coeff = coefficient;
+                for (int i=0; coeff[i]; i++ ) {
+                    document.write( coeff[i].toFixed(2) );
                 }
             </script>
             </div>
