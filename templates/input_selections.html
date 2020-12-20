@@ -26,7 +26,7 @@
         {% for coeff in coefficient %}
             {% for option in options_list %}
             <div>
-                "{{option}}:  "
+                {{option}}:  
                 <script type="text/javascript">
                 document.write({{coeff}}.toFixed(2));
                 </script>
