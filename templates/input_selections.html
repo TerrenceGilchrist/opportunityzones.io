@@ -26,7 +26,7 @@
             <div> 
             <script type="text/javascript">
                 var coeff;
-                for (option of {{options_list}}; coeff of {{coefficient}}) {
+                for (option of {{options_list}} && coeff of {{coefficient}}) {
                     document.write( option + ": " + coeff.toFixed(4) );
                 }
             </script>
