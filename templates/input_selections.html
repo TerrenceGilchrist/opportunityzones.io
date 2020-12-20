@@ -23,18 +23,13 @@
         <p></p>
 
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
-            <div> 
+        {% for coeff in coefficients %}
+        <div>
             <script type="text/javascript">
-                var options = {{options_list}};
-                var option;
-                var coefficients = Array.from({{coefficient}});
-                var coeff;
-                var j=0;
-                for (coeff of coefficients) {
-                    document.write( coeff.toFixed[4] );
-                }
+            document.write( {{coeff}}.toFixed(2) ); 
             </script>
-            </div>
+        </div>
+        {% endfor %}
         <p></p>
 
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Intercept </div>
