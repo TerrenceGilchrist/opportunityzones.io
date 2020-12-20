@@ -27,13 +27,12 @@
             <script type="text/javascript">
                 var options = {{options_list}};
                 var option;
-                var coefficients = {{coefficient}};
+                var coefficients = [{{coefficient}}];
                 var coeff;
                 var j=0;
-                var i=0; 
-                for (coeff of coefficients; i < coefficients.length; i++) {
+                for (i=0; i < coefficients.length; i++) {
+                    coeff = coefficients[i];
                     document.write( coeff.toFixed(4) );
-                    
                 }
             </script>
             </div>
