@@ -26,10 +26,10 @@
 
         <div>
             <script type="text/javascript">
-            var coeff = Array.from({{coefficient}});
-            var option = Array.from({{options_list}});
+            var coeff = {{coefficient}};
+            var option = {{options_list}};
                 for (let i = 0; i <3; i++) {
-            document.write( {{intercept}}.toFixed(2) + "\n" );
+                    document.write( {{intercept}}.toFixed(2) );
                 };
 
                 
