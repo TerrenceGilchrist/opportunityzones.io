@@ -25,9 +25,12 @@
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
             <div> 
             <script type="text/javascript">
+                var options = {{options_list}};
+                var option;
+                var coefficients = {{coefficient}};
                 var coeff;
-                for (option of {{options_list}} && coeff of {{coefficient}}) {
-                    document.write( option + ": " + coeff.toFixed(4) );
+                for (option of options_list && coeff of coefficients) {
+                    document.write( option + coeff.toFixed(4) );
                 }
             </script>
             </div>
