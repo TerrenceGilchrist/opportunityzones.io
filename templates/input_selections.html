@@ -26,10 +26,10 @@
 
         <div>
             <script type="text/javascript">
-                    document.write ( {{coefficient[2]}}.toFixed(2) );
-            </script>
-            <script type="text/javascript">
-                    document.write ( {{coefficient[0]}}.toFixed(2) );
+                for (let i = 0; i <3; i++) {
+                    document.write ( {{coefficient[i]}}.toFixed(2) );
+                    document.write ( {{coefficient[i]}}.toFixed(2) );
+                }
             </script>
         </div>
 
