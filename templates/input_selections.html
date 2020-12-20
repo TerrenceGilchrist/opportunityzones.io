@@ -31,9 +31,9 @@
                 var coeff;
                 var j=0;
                 var i=0; 
-                while (i < {{coefficient}}.length) {
-                    document.write( {{coefficient}}[i].toFixed(4) );
-                    i++;
+                for (coeff of coefficients; i < {{coefficient}}.length; i++) {
+                    document.write( coeff.toFixed(4) );
+                    
                 }
             </script>
             </div>
