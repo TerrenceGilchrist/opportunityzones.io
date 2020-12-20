@@ -23,14 +23,14 @@
         <p></p>
 
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
-        {% for option in options_list %}
+        for (option in options_list) {
             <div>
              {{option}}:  
                 <script type="text/javascript">
                 document.write({{coeff}}.toFixed(2));
                 </script>
             </div>
-        {% endfor %}
+        }
         <p></p>
 
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Intercept </div>
