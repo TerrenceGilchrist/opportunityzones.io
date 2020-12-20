@@ -29,10 +29,11 @@
                 var option;
                 var coefficients = {{coefficient}};
                 var coeff;
-                var i=0;
                 var j=0;
-                for (j < options.length; i < coefficients.length; j++; i++) {
-                    document.write( options[j] + ":  " + coefficients[i].toFixed(4) );
+                var i=0; 
+                while (i < {{coefficient}}.length) {
+                    document.write( {{coefficient}}[i].toFixed(4) );
+                    i++;
                 }
             </script>
             </div>
