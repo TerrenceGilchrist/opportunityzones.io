@@ -23,8 +23,7 @@
         <p></p>
 
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
-        {% for coeff in coefficient %}
-            {% option in options_list %}
+        {% for coeff in coefficient && option in options_list %}
         <div>
             <script type="text/javascript">
             document.write( {{option}} + ": " + {{coeff}}.toFixed(2) ); 
