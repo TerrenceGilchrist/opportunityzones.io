@@ -23,14 +23,14 @@
         <p></p>
 
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
-        {% foreach option in options_list && coeff in coefficient %}
+        <script type="text/javascript">
+            for (option in options_list && coeff in coefficient) {
             <div>
-             {{option}}:  
-                <script type="text/javascript">
+             {{option}}:        
                 document.write({{coeff}}.toFixed(2));
-                </script>
             </div>
-        {% endfor %}
+            }
+        </script>
         <p></p>
 
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Intercept </div>
