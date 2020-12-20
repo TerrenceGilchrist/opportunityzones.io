@@ -23,15 +23,13 @@
         <p></p>
 
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
-        {% for coeff in coefficient %}
-            {% for option in options_list %}
+        {% for option in options_list; coeff in coefficient %}
             <div>
-                {{option}}:  
+             {{option}}:  
                 <script type="text/javascript">
                 document.write({{coeff}}.toFixed(2));
                 </script>
             </div>
-            {% endfor %}
         {% endfor %}
         <p></p>
 
