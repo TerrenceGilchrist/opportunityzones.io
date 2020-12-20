@@ -25,9 +25,10 @@
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
 
         <div>
-            for (let i = 0; i<2; i++) {
                 <script type="text/javascript">
-                    {{coefficient[i]}}.toFixed(2);
+                    for (var i=0; i<2; i+=1) {
+                        {{coefficient[i]}};
+                    };
                 </script>
             };
       </div>
