@@ -26,8 +26,9 @@
 
         <div>
                 <script type="text/javascript">
-                    var i;
-                    for (i=0; i<{{coefficient}}.length; i+=1) {
+                    var i,
+                        coeff = Array.from( {{coefficient}} );
+                    for (i=0; i<coeff.length; i+=1) {
                         document.write( {{coefficient[0]}}.toFixed(2) + "<br>");
                     };
                 </script>
