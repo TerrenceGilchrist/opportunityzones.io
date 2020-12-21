@@ -1,7 +1,6 @@
 altair == 4.1.0
 Flask == 1.1.2
 gunicorn == 20.0.4
-javascripthon == 0.11
 jsonschema == 0.7
 pandas == 1.1.5
 requests == 2.25.0
