@@ -23,20 +23,11 @@
         <p></p>
 
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
-
-        <div>
+        {% for j in range(0, len)  %}
+                {{options_list[j]}} + : 
                 <script type="text/javascript">
-                    var i;
-                    var coeff = Array.from({{coefficient}});
-                    for (i=0; i<coeff.length; i+=1) {
-                        document.write( {{coefficient[0]}}.toFixed(2) + "<br>" );
-                    };
+                        document.write( {{coefficient[j]}}.toFixed(2) + "<br>" );
                 </script>
-      </div>
-       
-        {% for coeff, option in coefficient, options_list %}
-        {{coeff}} + <br>
-        {{option}}
         {% endfor %}
         <p></p>
 
