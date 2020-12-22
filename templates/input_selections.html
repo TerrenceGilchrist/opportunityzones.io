@@ -17,33 +17,35 @@
       
     <div id=container>
         {% if len == 1 %}
-        <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Selected Feature </div>
-        {% for option in options_list %}
-        <div> {{option}} </div>
+            <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Selected Feature </div>
+            {% for option in options_list %}
+            <div> {{option}} </div>
         {% else %}
-        <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Selected Feature(s) </div>
-        {% for option in options_list %}
-        <div> {{option}} </div>
-        {% endfor %}
+            <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Selected Feature(s) </div>
+            {% for option in options_list %}
+            <div> {{option}} </div>
+            {% endfor %}
         {% endif %}
         <p></p>
 
         {% if len == 1 %}
-        <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient </div>
+            <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient </div>
+            {% for j in range(0, len)  %}
             {{options_list[0]}}
-            :&nbsp
-            <script type="text/javascript">
-                document.write( {{coefficient[0]}}.toFixed(2) + "<br>" );
-            </script>
+                :&nbsp
+                <script type="text/javascript">
+                    document.write( {{coefficient[0]}}.toFixed(2) + "<br>" );
+                </script>
+            {% endfor %}
         {% else %}
-        <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
-        {% for j in range(0, len)  %}
-            {{options_list[j]}}
-            :&nbsp
-            <script type="text/javascript">
-                document.write( {{coefficient[j]}}.toFixed(2) + "<br>" );
-            </script>
-        {% endfor %}
+            <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
+            {% for j in range(0, len)  %}
+                {{options_list[j]}}
+                :&nbsp
+                <script type="text/javascript">
+                    document.write( {{coefficient[j]}}.toFixed(2) + "<br>" );
+                </script>
+            {% endfor %}
         {% endif %}
         <p></p>
 
