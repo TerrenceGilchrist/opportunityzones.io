@@ -22,7 +22,7 @@
             <div> {{option}} </div>
             {% endfor %}
         {% else %}
-            <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Selected Feature(s) </div>
+            <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Selected Features </div>
             {% for option in options_list %}
             <div> {{option}} </div>
             {% endfor %}
@@ -37,7 +37,7 @@
                     document.write( {{coefficient[0]}}.toFixed(2) + "<br>" );
                 </script>
         {% else %}
-            <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
+            <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficients </div>
             {% for j in range(0, len)  %}
                 {{options_list[j]}}
                 :&nbsp
