@@ -31,13 +31,11 @@
 
         {% if len == 1 %}
             <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient </div>
-            {% for j in range(0, len)  %}
-            {{options_list[j]}}
+            {{options_list[0]}}
                 :&nbsp
                 <script type="text/javascript">
-                    document.write( {{coefficient[j]}}.toFixed(2) + "<br>" );
+                    document.write( {{coefficient[0]}}.toFixed(2) + "<br>" );
                 </script>
-            {% endfor %}
         {% else %}
             <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
             {% for j in range(0, len)  %}
