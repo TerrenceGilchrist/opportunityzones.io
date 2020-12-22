@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- Page view of checkbox selections for feature-regressors -->
 <!-- December 11, 2020 ~7:01 p.m. to December 15, 2020 ~6:09 p.m. -->
-<!-- Last update: December 20, 2020 -->
+<!-- Last update: December 22, 2020 -->
 
 <html>
 
@@ -16,12 +16,26 @@
     <h2 style="font-family:'Palatino';"> Coefficients, Intercept, and Predicted Median Family Income from the Selected Features-Regressors </h2>
       
     <div id=container>
+        {% if len == 1 %}
+        <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Selected Feature </div>
+        {% for option in options_list %}
+        <div> {{option}} </div>
+        {% else %}
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Selected Feature(s) </div>
         {% for option in options_list %}
         <div> {{option}} </div>
         {% endfor %}
+        {% endif %}
         <p></p>
 
+        {% if len == 1 %}
+        <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient </div>
+            {{options_list[0]}}
+            :&nbsp
+            <script type="text/javascript">
+                document.write( {{coefficient[0]}}.toFixed(2) + "<br>" );
+            </script>
+        {% else %}
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Coefficient(s) </div>
         {% for j in range(0, len)  %}
             {{options_list[j]}}
@@ -30,6 +44,7 @@
                 document.write( {{coefficient[j]}}.toFixed(2) + "<br>" );
             </script>
         {% endfor %}
+        {% endif %}
         <p></p>
 
         <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Intercept </div>
@@ -71,7 +86,7 @@
 
         <p></p>
         <h4 style="font-family:'Palatino';"> Website created by Terrence E. Gilchrist, MPA, December 11-15, 2020 </h4>
-        <div><h4 style="font-family:'Palatino';"> Updated December 20, 2020 <div>
+        <div><h4 style="font-family:'Palatino';"> Updated December 22, 2020 <div>
             <div><h4 style="font-family:'Palatino';"> For source code and data, see 
                 <a href="https://www.GitHub.com/TerrenceGilchrist/OpportunityZonesMachineLearning"> www.GitHub.com/TerrenceGilchrist/OpportunityZonesMachineLearning </a>.</h4></div>
                 <p></p>
