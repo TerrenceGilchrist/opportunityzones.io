@@ -13,7 +13,12 @@
 
   <body style="font-family:'Palatino';background:#E1F5FE;">  
     
-    <h2 style="font-family:'Palatino';"> Coefficients, Intercept, and Predicted Median Family Income from the Selected Features-Regressors </h2>
+    {% if len == 1 %}
+        <h2 style="font-family:'Palatino';"> Coefficient, Intercept, and Predicted Median Family Income from the Selected Feature-Regressor </h2>
+    {% else %}
+        <h2 style="font-family:'Palatino';"> Coefficients, Intercept, and Predicted Median Family Income from the Selected Features-Regressors </h2>
+    {% endif %}
+      
       
     <div id=container>
         {% if len == 1 %}
