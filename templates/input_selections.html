@@ -18,9 +18,7 @@
     <div id=container>
         {% if len == 1 %}
             <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Selected Feature </div>
-            {% for option in options_list %}
-            <div> {{option}} </div>
-            {% endfor %}
+            <div> {{options_list[0]}} </div>
         {% else %}
             <div style="font-family:'Palatino';font-style:italic;color:#074E80;"> Selected Features </div>
             {% for option in options_list %}
