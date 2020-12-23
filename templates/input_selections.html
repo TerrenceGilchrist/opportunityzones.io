@@ -5,7 +5,8 @@
 
 <html>
 
-    <head> <title> Selected Features-Regressors </title>
+    <head> 
+    {% if len == 1 %} <title> Selected Feature-Regressor </title> {% else %} <title> Selected Features-Regressors </title> {% endif %}
     <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
